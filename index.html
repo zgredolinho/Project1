@@ -1,14 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Desktop Marketing App</title>
+  <meta charset="UTF-8">
+  <!-- <title>Marketing i Psychologia</title> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="description" content="Jakub Ojcieszak- frond-end developer oraz specjalista digital marketingu">
 </head>
+
 <body>
-    
-    <script src="js/scripts.js"></script>
+  <div class="wrapper">
+    <header class="logo">
+      <h1>My Portfolio</h1>
+      <button class="hamburger">
+        <span class="hamburger_box">
+          <span class="hamburger_inner"></span>
+        </span>
+      </button>
+      <div class="navigation">
+        <ul class="navigation_list">
+          <li class="navigation_item"><a href="#Marketing">Marketing</a></li>
+          <li class="navigation_item"><a href="#About">About me</a></li>
+          <li class="navigation_item"><a href="#Portfolio">Portfolio</a></li>
+          <li class="navigation_item"><a href="#Contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="content">
+      <p>You want to learn how to impact your employees, customers, and learn about negotiation techniques and strategies.</p>
+      <img src="./images/fashion-6066661_640.jpg" alt="bizneswoman">
+      <button>Scroll down</button>
+    </main>
+    <section id="Marketing" class="marketing">
+      <h2>Marketing</h2>
+      <img src="./images/marketing-640.jpg" alt="it is marketing">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, ea temporibus ducimus perferendis provident qui?</p>
+    </section>
+    <aside class="baner">
+      <p>Full banerr ad 468x60</p>
+    </aside>
+
+    <section class="definition">
+      <div class="definition_anime"></div>
+
+      <select id="countrySelect" size="1" onchange="makeSubmenu(this.value)">
+        <option value="" disabled selected>Choose part</option>
+        <option>Frondend</option>
+        <option>Psychologia</option>
+        <option>Marketing-internetowy</option>
+        <option>UXandUI</option>
+      </select>
+
+      <select id="citySelect" size="1">
+        <option value="" disabled selected>Choose service</option>
+        <option></option>
+      </select>
+
+      <button id="show" onclick="displaySelected()">show selected</button>
+      <div id="wynik"></div>
+      <button id="reset" onclick="resetSelection()">reset selected</button>
+    </section>
+    <section class="neon">
+      <button id="neono">WŁĄCZ</button>
+      <ul>
+        <li>P</li>
+        <li>S</li>
+        <li>Y</li>
+        <li>C</li>
+        <li>H</li>
+        <li>O</li>
+        <li>L</li>
+        <li>O</li>
+        <li>G</li>
+        <li>Y</li>
+      </ul>
+  </div>
+  </section>
+  <section class="about-me">
+    <article class="flex_about_me">
+      <h2 id="About">//About me<br><span>All about Techy</span></h2>
+      <p>Trochę o moich zainteresowaniach<br>oraz o moich skillach</p>
+      <ul>
+        <p>My interest</p>
+        <li>music</li>
+        <li>sport</li>
+        <li>book</li>
+      </ul>
+      <p>Ukończyłem kurs Easy Code</p>
+    </article>
+    <article class="flex_skills">
+      <h2>//Skills</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, molestias.</p>
+      <div>
+        <p>php 100%</p>
+      </div>
+      <div>
+        <p>js 90%</p>
+      </div>
+      <div>
+        <p>html 90%</p>
+      </div>
+      <div>
+        <p>nodejs 60%</p>
+      </div>
+      <div>
+        <p>css 90%</p>
+      </div>
+      <div>
+        <p>go 60%</p>
+      </div>
+    </article>
+  </section>
+  <section class="flex_tools">
+    <img src="./images/ko%C5%82a_03.png" alt="kolo3">
+    <h2>//Tools<br><span>My essentials</span></h2>
+    <img src="./images/t%C5%82o_gradient.png" alt="tło">
+    <div class="flex_tools_knowledge">
+      <img src="./images/React%2016.6.3.png" alt="React">
+      <img src="./images/Webpack.png" alt="webpack">
+      <img src="./images/Express.png" alt="express">
+      <img src="./images/StyleComponents.png" alt="stylecomponents">
+      <img src="./images/Redux.png" alt="Redux">
+      <img src="./images/Flexbox.png" alt="Flexbox">
+      <img src="./images/program%205.2.1.png" alt="Program1">
+      <img src="./images/program%205.2.2.png" alt="Program2">
+    </div>
+    <img src="./images/ko%C5%82a_01.png" alt="kolo1">
+  </section>
+  <section id="Portfolio" class="flex_portfolio">
+    <h2>//My works<br><span>Portfolio</span></h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci maiores harum repellendus ut, sequi deleniti.</p>
+    <img src="./images/ko%C5%82a_02.png" alt="kolo2">
+    <div class="flex_portfolio1for3">
+      <div class="portfolio1">
+        <img src="./images/apla_portfolio.png" alt="apla">
+        <img src="./images/portfolio_case_01.png" alt="portfolio1">
+        <img src="./images/bit_bucket_icon.png" alt="bitbucket">
+        <img src="./images/external_link_icon.png" alt="external">
+      </div>
+      <div class="portfolio2">
+        <img src="./images/apla_portfolio.png" alt="apla">
+        <img src="./images/portfolio_case_02.png" alt="portfolio2">
+        <img src="./images/bit_bucket_icon.png" alt="bitbucket">
+        <img src="./images/external_link_icon.png" alt="external">
+      </div>
+      <div class="portfolio3">
+        <img src="./images/apla_portfolio.png" alt="apla">
+        <img src="./images/portfolio_case_03.png" alt="portfolio3">
+        <img src="./images/bit_bucket_icon.png" alt="bitbucket">
+        <img src="./images/external_link_icon.png" alt="external">
+      </div>
+    </div>
+    <div class="flex_portfolio4for6">
+      <div class="portfolio4">
+        <img src="./images/apla_portfolio.png" alt="apla">
+        <img src="./images/portfolio_case_04.png" alt="porftolio4">
+        <img src="./images/bit_bucket_icon.png" alt="bitbucket">
+        <img src="./images/external_link_icon.png" alt="external">
+      </div>
+      <div class="portfolio5">
+        <img src="./images/apla_portfolio.png" alt="apla">
+        <img src="./images/portfolio_case_05.png" alt="portfolio5">
+        <img src="./images/bit_bucket_icon.png" alt="bitbucket">
+        <img src="./images/external_link_icon.png" alt="external">
+      </div>
+      <div class="portfolio6">
+        <img src="./images/apla_portfolio.png" alt="apla">
+        <img src="./images/portfolio_case_06.png" alt="portfolio6">
+        <img src="./images/bit_bucket_icon.png" alt="bitbucket">
+        <img src="./images/external_link_icon.png" alt="external">
+      </div>
+    </div>
+  </section>
+
+  <section id="Contact" class="flex__contact">
+    <article class="contact--me">
+      <h2>//Contact-me</h2>
+      <p>If you are willing to work with me,contact me. I can joint your conference to serve you with my engenieering expierience.</p>
+
+      <div class="contact__formular">
+        <form action="order.php" method="post">
+          <div> <label><input type="email" name="E-mail" placeholder="Your e-mail" required></label>
+            <label><input type="text" name="Firstname" placeholder="Your name" required></label>
+            <label><input type="text" name="message" placeholder="How can I help you?" required></label>
+          </div>
+        </form>
+      </div>
+    </article>
+    <article class="contact__transmit">
+      <div class="contact-transmit-adress">
+        <p> autor: Jakub Ojcieszak</p>
+        <p>jakub.ojcieszak@gmail.com</p>
+      </div>
+      <label><input type="submit" name="send" value="Send"></label>
+    </article>
+    <article class="contact__date">
+      <img src="./images/myphoto.jpg" alt="Jakub Ojcieszak">
+
+    </article>
+  </section>
+
+
+
+  <script type="text/javascript" src="event.js"></script>
+
 </body>
+
 </html>
